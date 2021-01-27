@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qiyutech.tbk.SearchActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_header"
+        android:layout_width="match_parent"
+        android:layout_height="36sp"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="closeSearchActivity"
+            android:scaleType="fitXY"
+            android:src="@mipmap/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--
+        https://stackoverflow.com/questions/14235677/how-do-i-open-the-searchview-programmatically
+        -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_search_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8sp"
+            android:background="@drawable/search_view_bg"
+            android:focusable="true"
+            app:defaultQueryHint="搜商品/宝贝标题"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toStartOf="@id/cancel_button"
+            app:layout_constraintStart_toEndOf="@id/back_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryHint="搜商品/宝贝标题" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            android:layout_width="64sp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:onClick="doSearchItem"
+            android:text="搜索"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/search_header">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/search_history_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16sp"
+                android:text="历史搜索"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/search_history_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/search_history_flex_box_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:alignContent="stretch"
+                app:alignItems="stretch"
+                app:flexWrap="wrap">
+
+            </com.google.android.flexbox.FlexboxLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/search_history_buttons">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/search_hot_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="热门搜索"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/hot_search_flex_box_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:alignContent="stretch"
+                    app:alignItems="stretch"
+                    app:flexWrap="wrap">
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

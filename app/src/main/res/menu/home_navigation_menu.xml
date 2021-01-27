@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/footer_index_activity"
+        android:icon="@drawable/f_icon_home"
+        android:title="首页" />
+    <item
+        android:id="@+id/footer_group_activity"
+        android:icon="@drawable/f_icon_group"
+        android:title="微信群" />
+    <item
+        android:id="@+id/footer_coupon_activity"
+        android:icon="@drawable/f_icon_coupon"
+        android:title="优惠券" />
+    <item
+        android:id="@+id/footer_me_activity"
+        android:icon="@drawable/f_icon_user"
+        android:title="我的" />
+</menu>

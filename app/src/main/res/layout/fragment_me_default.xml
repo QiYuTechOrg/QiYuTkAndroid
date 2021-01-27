@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.me.MeFragmentDefault">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.qiyutech.tbk.MeActivity">
+
+
+        <!-- 用户信息 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:paddingBottom="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/me_icon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="96dp"
+                app:cardCornerRadius="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/user_icon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_launcher_round"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- 点击登陆 -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/me_name"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/click_to_login"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/me_icon"
+                app:layout_constraintTop_toTopOf="@id/me_icon" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="72sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                app:cardBackgroundColor="#FEC147"
+                app:cardCornerRadius="8sp"
+                app:layout_constraintStart_toEndOf="@id/me_name"
+                app:layout_constraintTop_toTopOf="@id/me_name">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:text="奇遇淘客"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- https://www.jianshu.com/p/f2a4df406948 -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/goto_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/me_activity_row_h_margin"
+            android:layout_marginEnd="@dimen/me_activity_row_h_margin"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="goto settings"
+            android:scaleType="fitXY"
+            android:src="@mipmap/settings"
+            android:tint="@android:color/white"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

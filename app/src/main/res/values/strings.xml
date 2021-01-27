@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">奇遇淘客</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+    <string name="click_to_login">登录/注册</string>
+
+    <string name="loading">加载中…</string>
+    <string name="star_star_start_slot">***</string>
+    <string name="month_sale">月销:</string>
+    <string name="product_name_loading">产品名称加载中…</string>
+    <string name="coupon">优惠券</string>
+    <string name="shop_name_loading">商家名称加载中</string>
+    <string name="zero">0</string>
+    <string name="price_after_coupon">券后价:</string>
+</resources>

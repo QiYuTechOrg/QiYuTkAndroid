@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserInfoActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="12sp"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/id"
+                    layout="@layout/parts_simple_kv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp" />
+
+                <include
+                    android:id="@+id/mobile"
+                    layout="@layout/parts_simple_kv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp" />
+
+                <include
+                    android:id="@+id/gold"
+                    layout="@layout/parts_simple_kv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp" />
+
+                <include
+                    android:id="@+id/wx"
+                    layout="@layout/parts_simple_kv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp" />
+
+                <include
+                    android:id="@+id/tao_id"
+                    layout="@layout/parts_simple_kv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp" />
+
+                <include
+                    android:id="@+id/relation_id"
+                    layout="@layout/parts_simple_kv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp" />
+
+                <include
+                    android:id="@+id/ali_name"
+                    layout="@layout/parts_simple_kv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp" />
+
+                <include
+                    android:id="@+id/ali_account"
+                    layout="@layout/parts_simple_kv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/user_info">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bind_tb"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="淘宝授权"
+                    android:textColor="@color/goldenrod"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bind_ali_pay"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="绑定支付宝"
+                    android:textColor="@color/goldenrod"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bind_wx"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="绑定微信"
+                    android:textColor="@color/goldenrod"
+                    android:textSize="14sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

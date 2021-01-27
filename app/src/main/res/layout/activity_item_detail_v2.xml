@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qiyutech.tbk.ItemDetailV2Activity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="16sp"
+        android:alpha="0.4"
+        android:backgroundTint="@android:color/darker_gray"
+        android:contentDescription="back"
+        android:onClick="itemDetailV2Finish"
+        android:scaleType="center"
+        android:src="@mipmap/back"
+        app:borderWidth="0dp"
+        app:fabCustomSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginEnd="16sp"
+        android:alpha="0.4"
+        android:backgroundTint="@android:color/darker_gray"
+        android:contentDescription="share"
+        android:onClick="shareToSys"
+        android:scaleType="fitXY"
+        android:src="@drawable/forward"
+        app:borderWidth="0dp"
+        app:fabCustomSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/item_detail_web_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/activity_item_detail_footer"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8sp"
+            android:layout_marginEnd="8sp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                app:cardCornerRadius="8sp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.qiyutech.tbk.extend.MyNetworkImageView
+                        android:id="@+id/product_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_launcher_round"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/product_icon">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/price_actual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8sp"
+                            android:text="¥"
+                            android:textColor="@color/red"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/price_origin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginEnd="8sp"
+                            android:text="¥"
+                            app:layout_constraintBottom_toBottomOf="@id/price_actual"
+                            app:layout_constraintStart_toEndOf="@id/price_actual" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/month_sale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="8sp"
+                            android:gravity="center"
+                            android:text="@string/star_star_start_slot"
+                            app:layout_constraintBottom_toBottomOf="@id/price_actual"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/price_actual" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginEnd="8sp"
+                            android:gravity="center"
+                            android:text="@string/month_sale"
+                            app:layout_constraintBottom_toBottomOf="@id/month_sale"
+                            app:layout_constraintEnd_toStartOf="@id/month_sale"
+                            app:layout_constraintTop_toTopOf="@id/month_sale" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/product_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginTop="8sp"
+                            android:layout_marginEnd="8sp"
+                            android:maxLines="2"
+                            android:paddingBottom="8sp"
+                            android:text="@string/product_name_loading"
+                            app:layout_constraintTop_toBottomOf="@id/price_actual" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/coupon_bg"
+                    app:layout_constraintDimensionRatio="37:10"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/money_sign"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="bottom|end"
+                        android:text="¥"
+                        android:textColor="@color/red"
+                        app:layout_constraintHeight_percent="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".1" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/coupon_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="4sp"
+                        android:paddingEnd="4sp"
+                        android:text="@string/zero"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@id/money_sign"
+                        app:layout_constraintStart_toEndOf="@id/money_sign" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/coupon"
+                        android:textColor="@color/red"
+                        app:layout_constraintBottom_toBottomOf="@id/coupon_price"
+                        app:layout_constraintStart_toEndOf="@id/coupon_price" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/shop_icon_card"
+                        android:layout_width="64sp"
+                        android:layout_height="64sp"
+                        android:layout_marginStart="4sp"
+                        android:layout_marginTop="4sp"
+                        app:cardCornerRadius="32sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.qiyutech.tbk.extend.MyNetworkImageView
+                            android:id="@+id/shop_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_launcher_round" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/seller_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12sp"
+                        android:text="@string/shop_name_loading"
+                        app:layout_constraintBottom_toBottomOf="@id/shop_icon_card"
+                        app:layout_constraintStart_toEndOf="@id/shop_icon_card"
+                        app:layout_constraintTop_toTopOf="@id/shop_icon_card" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="4sp"
+                        android:background="#000000"
+                        app:layout_constraintTop_toBottomOf="@id/shop_icon_card" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8sp"
+                        android:paddingBottom="8sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/shop_icon_card">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/t1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent=".3333">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="宝贝描述:" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/desc_score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="0.0"
+                                    android:textColor="@color/red" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/t2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toEndOf="@id/t1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent=".3333">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="卖家服务:" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/service_score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="0.0"
+                                    android:textColor="@color/red" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent=".3333">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="物流服务:" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/ship_score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="0.0"
+                                    android:textColor="@color/red" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/image_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:orientation="vertical">
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_item_detail_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="48sp"
+            android:onClick="itemDetailV2Finish"
+            android:paddingStart="32sp"
+            android:paddingEnd="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_icon"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/f_icon_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:onClick="itemDetailV2Finish"
+                android:text="首页"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/home_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/star_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="48sp"
+            android:paddingStart="10sp"
+            android:paddingEnd="32sp"
+            app:layout_constraintStart_toEndOf="@id/home_wrapper"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/star_icon"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="收藏"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/star_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/star_wrapper"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="6sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginBottom="6sp"
+                android:background="@drawable/item_detail_coupon_bg"
+                android:gravity="center"
+                android:onClick="tryToBuy"
+                android:text="立即购买"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

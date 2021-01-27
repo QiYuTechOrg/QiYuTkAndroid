@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36sp"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sort_common"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="综合" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sort_sales"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="销量" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sort_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="价格" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

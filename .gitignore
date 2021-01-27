@@ -1,0 +1,13 @@
+.idea
+demo.json
+*.iml
+.gradle
+local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+app/release/app-release.apk
+app/release/output.json

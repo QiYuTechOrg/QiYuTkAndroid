@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="me_activity_group_margin">16sp</dimen>
+    <dimen name="me_activity_group_padding">8sp</dimen>
+    <dimen name="me_activity_group_space">8sp</dimen>
+    <dimen name="me_activity_icon_size">32dp</dimen>
+    <dimen name="me_activity_row_h_margin">16sp</dimen>
+    <dimen name="me_activity_row_v_margin">8sp</dimen>
+    <dimen name="me_activity_text_margin_start">8sp</dimen>
+
+    <dimen name="setting_activity_row_v_margin">12sp</dimen>
+
+    <!-- fragment group user -->
+
+    <!-- 淘宝客榜单推荐 -->
+
+    <!-- 地址添加 -->
+</resources>

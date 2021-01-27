@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4sp"
+    android:layout_marginTop="4sp"
+    android:layout_marginEnd="4sp"
+    android:layout_marginBottom="4sp"
+    app:cardCornerRadius="4sp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/all_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.qiyutech.tbk.extend.MyNetworkImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_launcher_round"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".35" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingStart="8sp"
+            android:paddingEnd="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:lines="2"
+                android:maxLines="2"
+                android:text="@string/loading"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/coupon_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                app:layout_constraintTop_toBottomOf="@id/title">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FED2D1"
+                        android:lines="1"
+                        android:text="券"
+                        android:textAlignment="center"
+                        android:textColor="#F01B1A" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/coupon_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F9E9E6"
+                        android:lines="1"
+                        android:text="@string/loading"
+                        android:textAlignment="center"
+                        android:textColor="#F01B1A" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/price_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@id/coupon_info">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/price_actual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_after_coupon"
+                        android:textAlignment="textStart"
+                        android:textColor="#F01B1A"
+                        android:textSize="20sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/price_origin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8sp"
+                        android:gravity="center|end"
+                        android:text="原价"
+                        android:textColor="#666666" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@id/price_info">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/shop_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="商家名称"
+                        android:textAlignment="textStart"
+                        android:textSize="12sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/month_sale"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toStartOf="@id/month_sale"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/month_sale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="8sp"
+                            android:gravity="center|end"
+                            android:text="@string/loading"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

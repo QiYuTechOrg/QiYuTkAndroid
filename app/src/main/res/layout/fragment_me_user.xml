@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.me.MeFragmentUser">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.qiyutech.tbk.MeActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 用户信息 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                android:paddingBottom="32sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/me_icon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="96dp"
+                    app:cardCornerRadius="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.qiyutech.tbk.extend.MyNetworkImageView
+                        android:id="@+id/user_icon"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/ic_launcher_round"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/me_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@id/me_icon"
+                    app:layout_constraintTop_toTopOf="@id/me_icon" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 分组信息 -->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_info">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 第一组 -->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/me_wrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/me_activity_group_margin"
+                        android:layout_marginEnd="@dimen/me_activity_group_margin"
+                        android:background="@drawable/button_round_corner"
+                        android:orientation="vertical">
+
+                        <!-- 我的订单 -->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/goto_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/me_activity_row_h_margin"
+                            android:layout_marginTop="@dimen/me_activity_row_v_margin"
+                            android:layout_marginEnd="@dimen/me_activity_row_h_margin"
+                            android:layout_marginBottom="@dimen/me_activity_row_v_margin"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/my_order"
+                                        android:layout_width="@dimen/me_activity_icon_size"
+                                        android:layout_height="@dimen/me_activity_icon_size"
+                                        android:src="@mipmap/me_order"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="@dimen/me_activity_text_margin_start"
+                                        android:gravity="center"
+                                        android:text="我的订单"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@id/my_order"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatImageButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@android:color/transparent"
+                                        android:src="@mipmap/forward"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!-- 第二组 -->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/me_activity_group_margin"
+                        android:layout_marginTop="@dimen/me_activity_group_space"
+                        android:layout_marginEnd="@dimen/me_activity_group_margin"
+                        android:background="@drawable/button_round_corner"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/me_activity_group_padding"
+                        android:paddingBottom="@dimen/me_activity_group_padding">
+
+                        <!-- 淘宝授权 -->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/try_taobao_auth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/me_activity_row_h_margin"
+                            android:layout_marginEnd="@dimen/me_activity_row_h_margin"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/me_activity_row_v_margin"
+                                android:layout_marginBottom="@dimen/me_activity_row_v_margin">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/taobao_auth"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:src="@mipmap/tao_bao_auth"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="@dimen/me_activity_text_margin_start"
+                                        android:gravity="center"
+                                        android:text="淘宝授权"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@id/taobao_auth"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatImageButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@android:color/transparent"
+                                        android:src="@mipmap/forward"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <!-- 分享 APP -->
+                        <!-- 暂时不需要分享 APP
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/me_activity_row_h_margin"
+                            android:layout_marginTop="@dimen/me_activity_row_v_margin"
+                            android:layout_marginEnd="@dimen/me_activity_row_h_margin"
+                            android:layout_marginBottom="@dimen/me_activity_row_v_margin"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/share_app"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:src="@mipmap/share_user"
+                                        tbk:layout_constraintBottom_toBottomOf="parent"
+                                        tbk:layout_constraintStart_toStartOf="parent"
+                                        tbk:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="@dimen/me_activity_text_margin_start"
+                                        android:gravity="center"
+                                        android:text="分享 APP"
+                                        tbk:layout_constraintBottom_toBottomOf="parent"
+                                        tbk:layout_constraintStart_toEndOf="@id/share_app"
+                                        tbk:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <androidx.appcompat.widget.AppCompatImageButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@android:color/transparent"
+                                        android:src="@mipmap/forward"
+                                        tbk:layout_constraintBottom_toBottomOf="parent"
+                                        tbk:layout_constraintEnd_toEndOf="parent"
+                                        tbk:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <include layout="@layout/me_activity_divider" />
+
+                        -->
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <!-- https://www.jianshu.com/p/f2a4df406948 -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/goto_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/me_activity_row_h_margin"
+                android:layout_marginEnd="@dimen/me_activity_row_h_margin"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="settings"
+                android:scaleType="fitXY"
+                android:src="@mipmap/settings"
+                android:tint="@android:color/white"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</FrameLayout>

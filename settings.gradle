@@ -1,0 +1,2 @@
+rootProject.name = 'TaoBaoKe'
+include ':app'
