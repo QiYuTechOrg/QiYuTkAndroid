@@ -32,13 +32,4 @@ class ExampleUnitTest {
         val v2 = Gson().fromJson(s, Demo::class.java)
         assertEquals(v, v2)
     }
-
-    @Test
-    fun orgJsonGson() {
-        val s = Gson().toJson(Demo("hello"))
-
-        val v = JSONObject(s)
-
-        assertEquals("not equal:", v.getString("demo"), "hello")
-    }
 }
