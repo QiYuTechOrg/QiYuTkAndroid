@@ -20,4 +20,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.os }}
-          path: ./app/build/outputs/apk/
+          path: app/build/outputs/apk/
