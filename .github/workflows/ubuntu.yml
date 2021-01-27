@@ -16,3 +16,8 @@ jobs:
 
       - name: Build APK
         run: ./gradlew build
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.os }}
+          path: ./app/build/outputs/apk/
