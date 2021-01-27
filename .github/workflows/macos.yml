@@ -19,5 +19,5 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: ${{ matrix.os }}
+          name: macos
           path: app/build/outputs/apk/
