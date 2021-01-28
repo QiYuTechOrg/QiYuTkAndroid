@@ -4,11 +4,24 @@
 ![macOS](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/macOS/badge.svg?branch=main)
 ![Ubuntu](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/Ubuntu/badge.svg?branch=main)
 
-## 注意
+
+## todo
+
+添加文档
+   
+## 博客文章
+
+[官方博客](https://blog.qiyutech.tech/202101/28_tbk_android/)
+
+## 提示
 
     iOS 和 服务器端 的代码正在整理中, 整理完成之后也会提交到 Github
 
-## Android Studio 版本
+## 编译环境
+
+下载代码直接使用 Android Studio 编译运行
+
+### Android Studio 版本
 
     Android Studio 4.1.2
     Build #AI-201.8743.12.41.7042882, built on December 20, 2020
