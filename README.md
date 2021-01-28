@@ -1,5 +1,9 @@
 # 奇遇淘客 Android 版
 
+![Windows](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/Windows/badge.svg?branch=main)
+![macOS](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/macOS/badge.svg?branch=main)
+![Ubuntu](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/Ubuntu/badge.svg?branch=main)
+
 ## Android Studio 版本
 
     Android Studio 4.1.2
