@@ -4,6 +4,10 @@
 ![macOS](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/macOS/badge.svg?branch=main)
 ![Ubuntu](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/Ubuntu/badge.svg?branch=main)
 
+## 注意
+
+    iOS 和 服务器端 的代码正在整理中, 整理完成之后也会提交到 Github
+
 ## Android Studio 版本
 
     Android Studio 4.1.2
@@ -15,4 +19,3 @@
     Memory: 1981M
     Cores: 8
     Registry: ide.new.welcome.screen.force=true, external.system.auto.import.disabled=true
-    Non-Bundled Plugins: IdeaVIM, org.intellij.plugins.markdown, org.jetbrains.kotlin, indent-rainbow.indent-rainbow, name.kropp.intellij.makefile, BashSupport, izhangzhihao.rainbow.brackets
