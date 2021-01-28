@@ -25,11 +25,11 @@ buildscript {
 
 allprojects {
     repositories {
+        google()
+        jcenter()
         maven {
             url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
         }
-        google()
-        jcenter()
 
         // https://www.jianshu.com/p/5f0edc95a398
         flatDir {
