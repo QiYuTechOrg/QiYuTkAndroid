@@ -5,9 +5,9 @@
 ![Ubuntu](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/Ubuntu/badge.svg?branch=main)
 
 
-## todo
+## 奇遇淘客文档
 
-添加文档
+[文档](https://tbk.qiyutech.tech/)
    
 ## 博客文章
 
@@ -15,7 +15,7 @@
 
 ## 提示
 
-    iOS 和 服务器端 的代码正在整理中, 整理完成之后也会提交到 Github
+    服务器端 的代码正在整理中, 整理完成之后也会提交到 Github
 
 ## 编译环境
 
