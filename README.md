@@ -11,7 +11,7 @@
    
 ## 博客文章
 
-[官方博客](https://blog.qiyutech.tech/202101/28_tbk_android/)
+[发布记录](https://blog.qiyutech.tech/202101/28_tbk_android/)
 
 ## 提示
 
