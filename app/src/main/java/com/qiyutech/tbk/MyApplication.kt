@@ -1,6 +1,5 @@
 package com.qiyutech.tbk
 
-// import com.mob.secverify.SecVerify
 import android.app.Application
 import android.webkit.WebView
 import com.alibaba.baichuan.android.trade.AlibcTradeSDK
