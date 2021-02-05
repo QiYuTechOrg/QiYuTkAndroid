@@ -5,9 +5,10 @@
 ![Ubuntu](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/Ubuntu/badge.svg?branch=main)
 
 
-## 奇遇淘客 iOS 版
+## 奇遇淘客系统代码库
 
-[iOS 版](https://github.com/QiYuTechDev/QiYuTkiOS)
+[奇遇淘客 iOS 版](https://github.com/QiYuTechDev/QiYuTkiOS)
+[奇遇淘客 服务器端](https://github.com/QiYuTechDev/QiYuTkiServer)
 
 ## 奇遇淘客文档
 
@@ -17,9 +18,6 @@
 
 [发布记录](https://blog.qiyutech.tech/202101/28_tbk_android/)
 
-## 提示
-
-    服务器端 的代码正在整理中, 整理完成之后也会提交到 Github
 
 ## 编译环境
 
