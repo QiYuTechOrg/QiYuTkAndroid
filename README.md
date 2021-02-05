@@ -5,10 +5,10 @@
 ![Ubuntu](https://github.com/QiYuTechDev/QiYuTkAndroid/workflows/Ubuntu/badge.svg?branch=main)
 
 
-## 奇遇淘客系统代码库
+## 奇遇淘客代码库
 
-[奇遇淘客 iOS 版](https://github.com/QiYuTechDev/QiYuTkiOS)
-[奇遇淘客 服务器端](https://github.com/QiYuTechDev/QiYuTkiServer)
+* [奇遇淘客 iOS 版](https://github.com/QiYuTechDev/QiYuTkiOS)
+* [奇遇淘客 服务器端](https://github.com/QiYuTechDev/QiYuTkiServer)
 
 ## 奇遇淘客文档
 
