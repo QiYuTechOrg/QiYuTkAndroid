@@ -135,7 +135,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.preference:preference-ktx:1.1.1'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     // live data support
     implementation "android.arch.lifecycle:extensions:1.1.1"
@@ -147,8 +147,8 @@ dependencies {
     // navigation
     // https://developer.android.com/guide/navigation/navigation-getting-started
     // Kotlin
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     // end of navigation
 
