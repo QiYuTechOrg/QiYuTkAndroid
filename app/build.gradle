@@ -86,8 +86,8 @@ android {
     productFlavors {
         dev {
             // dev env not same
-            buildConfigField 'String', 'BASE_URL', '"https://api.tbk.qiyutech.tech"'
-            buildConfigField 'String', 'ADMIN_URL', '"https://admin.tbk.qiyutech.tech"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.taidimall.com"'
+            buildConfigField 'String', 'ADMIN_URL', '"https://www.taidimall.com"'
             buildConfigField 'String', 'ENV', '"dev"'
 
             dimension "env"
@@ -95,8 +95,8 @@ android {
 
         pdev {
             // dev env not same
-            buildConfigField 'String', 'BASE_URL', '"https://api.tbk.qiyutech.tech"'
-            buildConfigField 'String', 'ADMIN_URL', '"https://admin.tbk.qiyutech.tech"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.taidimall.com"'
+            buildConfigField 'String', 'ADMIN_URL', '"https://www.taidimall.com"'
             buildConfigField 'String', 'ENV', '"dev"'
 
             dimension "env"
@@ -105,8 +105,8 @@ android {
 
         prod {
             // dev env not same
-            buildConfigField 'String', 'BASE_URL', '"https://api.tbk.qiyutech.tech"'
-            buildConfigField 'String', 'ADMIN_URL', '"https://admin.tbk.qiyutech.tech"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.taidimall.com"'
+            buildConfigField 'String', 'ADMIN_URL', '"https://www.taidimall.com"'
             buildConfigField 'String', 'ENV', '"release"'
 
             dimension "env"
