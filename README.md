@@ -25,8 +25,8 @@
 
 ### Android Studio 版本
 
-    Android Studio 4.1.2
-    Build #AI-201.8743.12.41.7042882, built on December 20, 2020
+    Android Studio 4.1.3
+    Build #AI-201.8743.12.41.7199119, built on March 11, 2021
     Runtime version: 1.8.0_242-release-1644-b3-6915495 x86_64
     VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
     macOS 10.16
