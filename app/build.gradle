@@ -9,8 +9,8 @@ android {
     compileSdkVersion 29
     // try to fix for azure build
     // https://github.com/gradle/gradle/issues/12440#issuecomment-606188282
-    ndkVersion "21.3.6528147"
-    buildToolsVersion "29.0.3"
+    // ndkVersion "21.3.6528147"
+    // buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.qiyutech.tbk"
@@ -147,14 +147,14 @@ dependencies {
     // navigation
     // https://developer.android.com/guide/navigation/navigation-getting-started
     // Kotlin
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     // end of navigation
 
     // for recycler view
     // https://developer.android.com/jetpack/androidx/releases/recyclerview
-    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.recyclerview:recyclerview:1.2.0"
 
     // https://stackoverflow.com/questions/52537638/how-to-resolve-noclassdeffounderror-failed-resolution-of-landroid-view-viewon/65217631#65217631
     // implementation 'androidx.appcompat:appcompat:1.2.0'
