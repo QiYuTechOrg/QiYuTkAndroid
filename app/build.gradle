@@ -6,7 +6,7 @@ apply plugin: 'kotlin-parcelize' // replace kotlin-android-extensions
 
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     // try to fix for azure build
     // https://github.com/gradle/gradle/issues/12440#issuecomment-606188282
     // ndkVersion "21.3.6528147"
@@ -21,7 +21,7 @@ android {
     defaultConfig {
         applicationId "com.qiyutech.tbk"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 100
         versionName "1.0.0"
 
@@ -92,7 +92,7 @@ android {
     productFlavors {
         dev {
             // dev env not same
-            buildConfigField 'String', 'BASE_URL', '"https://api.taidimall.com"'
+            buildConfigField 'String', 'BASE_URL', '"https://www.taidimall.com/api"'
             buildConfigField 'String', 'ADMIN_URL', '"https://www.taidimall.com"'
             buildConfigField 'String', 'ENV', '"dev"'
 
@@ -101,7 +101,7 @@ android {
 
         pdev {
             // dev env not same
-            buildConfigField 'String', 'BASE_URL', '"https://api.taidimall.com"'
+            buildConfigField 'String', 'BASE_URL', '"https://www.taidimall.com/api"'
             buildConfigField 'String', 'ADMIN_URL', '"https://www.taidimall.com"'
             buildConfigField 'String', 'ENV', '"dev"'
 
@@ -111,7 +111,7 @@ android {
 
         prod {
             // dev env not same
-            buildConfigField 'String', 'BASE_URL', '"https://api.taidimall.com"'
+            buildConfigField 'String', 'BASE_URL', '"https://www.taidimall.com/api"'
             buildConfigField 'String', 'ADMIN_URL', '"https://www.taidimall.com"'
             buildConfigField 'String', 'ENV', '"release"'
 
@@ -137,7 +137,7 @@ android {
 dependencies {
     // implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
 
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.32'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.0'
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.preference:preference-ktx:1.1.1'
