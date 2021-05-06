@@ -14,9 +14,9 @@ android {
 
     // todo 最好移除掉
     // 当前 lint 有假报告
-    // lintOptions {
-    //    abortOnError false
-    // }
+    lintOptions {
+        abortOnError false
+    }
 
     defaultConfig {
         applicationId "com.qiyutech.tbk"
