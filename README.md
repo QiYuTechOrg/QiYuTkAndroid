@@ -12,25 +12,10 @@
 
 ## 奇遇淘客文档
 
-[文档](https://tbk.qiyutech.tech/)
+[奇遇淘客 文档](https://tbk.qiyutech.tech/)
+[奇遇淘客 Android](https://tbk.qiyutech.tech/android/index.html)
    
 ## 博客文章
 
 [发布记录](https://blog.qiyutech.tech/202101/28_tbk_android/)
 
-
-## 编译环境
-
-下载代码直接使用 Android Studio 编译运行
-
-### Android Studio 版本
-
-    Android Studio 4.1.3
-    Build #AI-201.8743.12.41.7199119, built on March 11, 2021
-    Runtime version: 1.8.0_242-release-1644-b3-6915495 x86_64
-    VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
-    macOS 10.16
-    GC: ParNew, ConcurrentMarkSweep
-    Memory: 1981M
-    Cores: 8
-    Registry: ide.new.welcome.screen.force=true, external.system.auto.import.disabled=true
