@@ -145,7 +145,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     // live data support
     implementation "android.arch.lifecycle:extensions:1.1.1"
-    implementation 'com.google.android:flexbox:2.0.1'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
 
     // paging 库
     implementation "androidx.paging:paging-runtime-ktx:3.0.1"

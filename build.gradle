@@ -8,6 +8,7 @@ buildscript {
 
     repositories {
         google()
+        jcenter()
         mavenCentral()
         maven {
             url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
@@ -27,6 +28,7 @@ buildscript {
 allprojects {
     repositories {
         google()
+        jcenter()
         mavenCentral()
         maven {
             url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
